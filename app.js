@@ -80,55 +80,74 @@ function AppPrompt() {
           inquirer.prompt([
               {
                 type: "input",
-                name: "engineersName",
+                name: "engineerName",
                 message: "What is your engineer's name?",
                 
               },
               {
                 type: "input",
-                name: "engineersId",
+                name: "engineerId",
                 message: "What is your engineer's id?",
                
               },
               {
                 type: "input",
-                name: "engineersEmail",
+                name: "engineerEmail",
                 message: "What is your enginner's email?",
                 
+              },
+              {
+                type: "input",
+                name: "engineerGithub",
+                message: "What is your enginner's Github?",
+                
+              }
+            ]).then(answers => {
+              const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+              teamMembers.push(engineer);
+              idArray.push(answers.engineerId);
+              makeTeam();
+            });
           }
-        ])  
-          }
+          
   
     
           function addIntern() {
            inquirer.prompt([
               {
                 type: "input",
-                name: "internsName",
+                name: "internName",
                 message: "What is your intern's name?",
                 
               },
               {
                 type: "input",
-                name: "internsId",
+                name: "internId",
                 message: "What is your intern's id?",
                
               },
               {
                 type: "input",
-                name: "internsEmail",
+                name: "internEmail",
                 message: "What is your intern's email?",
                 
               },
               {
                 type: "input",
-                name: "internsSchool",
+                name: "internSchool",
                 message: "What is your school did you attend?",
                 
               }
-            ])
+            ]).then(answers => {
+              const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+              teamMembers.push(intern);
+              idArray.push(answers.internId);
+              makeTeam();
+            });
+          }
+          
             
-      }
+      
         function buildTeam() {
             // Create the output directory if the output path doesn't exist
             if (!fs.existsSync(OUTPUT_DIR)) {
