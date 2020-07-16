@@ -48,4 +48,18 @@ function AppPrompt() {
         idArray.push(answers.managerId);
         makeTeam();
       });
-    }}
+    }
+
+    function makeTeam() {
+
+        inquirer.prompt([
+          {
+            type: "list",
+            name: "memberChoice",
+            message: "Which type of team member would you like to add?",
+            choices: [
+              "Engineer",
+              "Intern",
+              "I don't want to add any more team members"
+            ]
+          }
