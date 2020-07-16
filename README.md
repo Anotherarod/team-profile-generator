@@ -12,6 +12,6 @@ If "Engineer" was selected, the app asks the user for the team member's GitHub u
 
 Here is an image example of the prompts:
 
-![](Team generator image.jpg)
+![](Readme%20Images/Team generator image.jpg)
 
 When all information on the team member has been entered, the user is given an option of not wanting to add anymore memebers. If not, an HTML file is created with cards displaying the information on all the team members entered by the user in the "outputs" folder titled "team.html."
