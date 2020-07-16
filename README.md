@@ -18,4 +18,4 @@ When all information on the team member has been entered, the user is given an o
 
 Below is a video that show the app in progress.
 
-![](Images/TeamProfilevideomp4.mp4)
+![](Images/Team%20Profile%20Generator.gif)
