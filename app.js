@@ -76,7 +76,59 @@ function AppPrompt() {
             }
           });
         }
-     
+        function addEngineer() {
+          inquirer.prompt([
+              {
+                type: "input",
+                name: "engineersName",
+                message: "What is your engineer's name?",
+                
+              },
+              {
+                type: "input",
+                name: "engineersId",
+                message: "What is your engineer's id?",
+               
+              },
+              {
+                type: "input",
+                name: "engineersEmail",
+                message: "What is your enginner's email?",
+                
+          }
+        ])  
+          }
+  
+    
+          function addIntern() {
+           inquirer.prompt([
+              {
+                type: "input",
+                name: "internsName",
+                message: "What is your intern's name?",
+                
+              },
+              {
+                type: "input",
+                name: "internsId",
+                message: "What is your intern's id?",
+               
+              },
+              {
+                type: "input",
+                name: "internsEmail",
+                message: "What is your intern's email?",
+                
+              },
+              {
+                type: "input",
+                name: "internsSchool",
+                message: "What is your school did you attend?",
+                
+              }
+            ])
+            
+      }
         function buildTeam() {
             // Create the output directory if the output path doesn't exist
             if (!fs.existsSync(OUTPUT_DIR)) {
