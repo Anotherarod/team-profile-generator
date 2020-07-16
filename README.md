@@ -15,3 +15,7 @@ Here is an image example of the prompts:
 ![](Images/Team%20generator%20image.jpg)
 
 When all information on the team member has been entered, the user is given an option of not wanting to add anymore memebers. If not, an HTML file is created with cards displaying the information on all the team members entered by the user in the "outputs" folder titled "team.html."
+
+Below is a video that show the app in progress.
+
+![](Images/TeamProfilevideomp4.mp4)
