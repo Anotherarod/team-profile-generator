@@ -42,3 +42,10 @@ function AppPrompt() {
           message: "What is your manager's office number?",
          
         }
+    ]).then(answers => {
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+        teamMembers.push(manager);
+        idArray.push(answers.managerId);
+        makeTeam();
+      });
+    }}
